@@ -11,8 +11,8 @@
 
 		<div class="container">
 			<div class="box">
-				<img src="img/avaness.jpeg" alt="">
-				<img src="img/apple.jpg" alt="">
+				<img src="content/upload/avaness.jpeg" alt="">
+				<img src="content/upload/apple.jpg" alt="">
 			</div>
 		</div>
 

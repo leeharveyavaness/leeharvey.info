@@ -135,6 +135,7 @@ body {
 
 button, input, optgroup, select, textarea {
 	font-family: 'Century Gothic';
+	color: var(--text-color);
 }
 
 button:focus {
@@ -186,6 +187,10 @@ div.fixed-action-btn {
 	align-items: center;
 }
 
+figure {
+	text-align: center;
+}
+
 .card {
 	background: var(--color-card);
 	color: var(--text-color);
@@ -214,7 +219,7 @@ div.fixed-action-btn {
 }
 
 .sidenav {
-	background: var(--background);
+	background: var(--color-card);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
 	position: fixed;
@@ -264,6 +269,10 @@ div.fixed-action-btn {
 }
 
 .red {
+	color: #EA4335;
+}
+
+.error {
 	color: #EA4335;
 }
 
