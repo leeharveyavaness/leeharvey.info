@@ -1,11 +1,5 @@
-<?php require 'inc/db.php'; 
-
-	session_start();
-
-	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-		header("location: inc/log.php");
-		exit;
-	}
+<?php 
+	require_once 'inc/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<?php
-				$sql = "SELECT * FROM post";   
+				$sql = "SELECT * FROM articles ORDER BY id DESC";   
 				$result = $pdo->query($sql);
 				if($result->rowCount() > 0){
 					while($row = $result->fetch()) : ?>
@@ -34,16 +28,17 @@
 					<div class="col s12 m6 l4">
 						<div class="card">
 							<div class="card-content">
-								<a href="<?php echo $row['link']; ?>" class="card-title"><?php echo $row['title']; ?></a>
-								<p><?php echo $row['info']; ?></p>
+								<a href="post.php?id=<?php echo $row['id']; ?>" class="card-title"><?php echo $row['title']; ?></a>
+								<p><?php echo $row['anons']; ?></p>
+								
 							</div>
       						</div>
     					</div>
-	
+
 				<?php
 					endwhile;
     				} else{
-					echo "No records matching your query were found.";
+					echo "<h3>No records matching your query were found.</h3>";
     				}
 				
 				?>

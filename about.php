@@ -27,7 +27,7 @@
 								<img class="circle" width="23%" src="content/upload/avaness.jpeg" alt="avaness">
 							</figure>
 							<h3 class="center">Vadym Kushch</h3>
-							<h4 class="center">Video maker, Web programmer</h4>
+							<h4 class="center">Відеомонтажер</h4>
 						</div>
 					</div>
 				</div>
