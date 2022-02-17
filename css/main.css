@@ -3,13 +3,13 @@
 }
 
 *::selection {
-	background: #ff6200;
+	background: #fb9805;
 }
 
 :root {
 	--color-mode: 'light';
 	--color-dark: #000;
-	--color-dark2: #232323;
+	--color-dark2: #121212;
 	--color-dark-alpha: rgba(0, 0, 0, 0.1);
 	--color-light: #efefef;
 	--color-light2: #efefef;
@@ -189,6 +189,10 @@ div.fixed-action-btn {
 
 figure {
 	text-align: center;
+}
+
+.justify {
+	text-align: justify;
 }
 
 .card {

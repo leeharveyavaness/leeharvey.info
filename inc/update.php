@@ -1,123 +1,91 @@
 <?php
 
-require_once "db.php";
- 
+	require_once "db.php";
 
-$title = $anons = $content = "";
-$title_err = $anons_err = $content_err = "";
- 
+	$title = $anons = $content = "";
+	$title_err = $anons_err = $content_err = "";
 
-if(isset($_POST["id"]) && !empty($_POST["id"])){
-    
-    $id = $_POST["id"];
+	if(isset($_POST["id"]) && !empty($_POST["id"])){
+		$id = $_POST["id"];
 
-    $input_title = trim($_POST["title"]);
-    if(empty($input_title)){
-        $title_err = "Please enter a title.";
-    } else{
-        $title = $input_title;
-    }
-    
-    
-    $input_anons = trim($_POST["anons"]);
-    if(empty($input_anons)){
-        $anons_err = "Please enter an anons.";
-    } else{
-        $anons = $input_anons;
-    }
-    
-    
-    $input_content = trim($_POST["content"]);
-    if(empty($input_content)){
-        $content_err = "Please enter an content.";
-    } else{
-        $content = $input_content;
-    }
-    
-    
-    if(empty($title_err) && empty($anons_err) && empty($content_err)){
-        
-        $sql = "UPDATE articles SET title=:title, anons=:anons, content=:content WHERE id=:id";
- 
-        if($stmt = $pdo->prepare($sql)){
-            // Bind variables to the prepared statement as parameters
-            $stmt->bindParam(":title", $param_title);
-            $stmt->bindParam(":anons", $param_anons);
-            $stmt->bindParam(":content", $param_content);
-            $stmt->bindParam(":id", $param_id);
-            
-            // Set parameters
-            $param_title = $title;
-            $param_anons = $anons;
-            $param_content = $content;
-            $param_id = $id;
-            
-            // Attempt to execute the prepared statement
-            if($stmt->execute()){
-                // Records updated successfully. Redirect to landing page
-                header("location: ../index.php");
-                exit();
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-        }
-         
-        // Close statement
-        unset($stmt);
-    }
-    
-    // Close connection
-    unset($pdo);
-} else{
-    // Check existence of id parameter before processing further
-    if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
-        // Get URL parameter
-        $id =  trim($_GET["id"]);
-        
-        // Prepare a select statement
-        $sql = "SELECT * FROM articles WHERE id = :id";
-        if($stmt = $pdo->prepare($sql)){
-            // Bind variables to the prepared statement as parameters
-            $stmt->bindParam(":id", $param_id);
-            
-            // Set parameters
-            $param_id = $id;
-            
-            // Attempt to execute the prepared statement
-            if($stmt->execute()){
-                if($stmt->rowCount() == 1){
-                    /* Fetch result row as an associative array. Since the result set
-                    contains only one row, we don't need to use while loop */
-                    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                
-                    // Retrieve individual field value
-                    $title = $row["title"];
-                    $anons = $row["anons"];
-                    $content = $row["content"];
-                } else{
-                    // URL doesn't contain valid id. Redirect to error page
-                    header("location: ../error.php");
-                    exit();
-                }
-                
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-        }
-        
-        // Close statement
-        unset($stmt);
-        
-        // Close connection
-        unset($pdo);
-    }  else{
-        // URL doesn't contain id parameter. Redirect to error page
-        header("location: ../error.php");
-        exit();
-    }
-}
+		$input_title = trim($_POST["title"]);
+		if(empty($input_title)){
+			$title_err = "Please enter a title.";
+		} else{
+			$title = $input_title;
+		}
+
+		$input_anons = trim($_POST["anons"]);
+		if(empty($input_anons)){
+			$anons_err = "Please enter an anons.";
+		} else{
+			$anons = $input_anons;
+		}
+
+		$input_content = trim($_POST["content"]);
+		if(empty($input_content)){
+			$content_err = "Please enter an content.";
+		} else{
+			$content = $input_content;
+		}
+	
+		if(empty($title_err) && empty($anons_err) && empty($content_err)){
+			$sql = "UPDATE avaness_post SET title=:title, anons=:anons, content=:content WHERE id=:id";
+			if($stmt = $pdo->prepare($sql)){
+		
+				$stmt->bindParam(":title", $param_title);
+				$stmt->bindParam(":anons", $param_anons);
+				$stmt->bindParam(":content", $param_content);
+				$stmt->bindParam(":id", $param_id);
+	
+				$param_title = $title;
+				$param_anons = $anons;
+				$param_content = $content;
+				$param_id = $id;
+		
+		
+				if($stmt->execute()){
+					header("location: ../index.php");
+					exit();
+				} else{
+					echo "Oops! Something went wrong. Please try again later.";
+				}
+			}
+			unset($stmt);
+		}
+		unset($pdo);
+	} else{
+		if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
+		
+			$id =  trim($_GET["id"]);
+		
+			$sql = "SELECT * FROM avaness_post WHERE id = :id";
+			if($stmt = $pdo->prepare($sql)){
+				$stmt->bindParam(":id", $param_id);
+				$param_id = $id;
+				if($stmt->execute()){
+					if($stmt->rowCount() == 1){
+						$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+						$title = $row["title"];
+						$anons = $row["anons"];
+						$content = $row["content"];
+					} else{
+						header("location: ../error.php");
+						exit();
+					}
+				} else{
+					echo "Oops! Something went wrong. Please try again later.";
+				}
+			}
+			unset($stmt);
+			unset($pdo);
+		}  else{
+			header("location: ../error.php");
+			exit();
+		}
+	}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

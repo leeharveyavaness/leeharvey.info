@@ -2,26 +2,26 @@
 
 	require_once "db.php";
  
-	$username = $password = $confirm_password = "";
-	$username_err = $password_err = $confirm_password_err = "";
+	$user = $email = $pass = $confirm_pass = "";
+	$user_err = $email_err = $pass_err = $confirm_pass_err = "";
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		if(empty(trim($_POST["username"]))){
-			$username_err = "Please enter a username.";
-		} elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
-			$username_err = "Username can only contain letters, numbers, and underscores.";
+		if(empty(trim($_POST["user"]))){
+			$user_err = "Please enter a username.";
+		} elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["user"]))){
+			$user_err = "Username can only contain letters, numbers, and underscores.";
 		} else{
-			$sql = "SELECT id FROM users WHERE username = :username";
+			$sql = "SELECT id FROM avaness_user WHERE user = :user";
 
 			if($stmt = $pdo->prepare($sql)){
-				$stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-				$param_username = trim($_POST["username"]);
+				$stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
+				$param_username = trim($_POST["user"]);
 
 				if($stmt->execute()){
 					if($stmt->rowCount() == 1){
-						$username_err = "This username is already taken.";
+						$user_err = "This username is already taken.";
 					} else{
-						$username = trim($_POST["username"]);
+						$user = trim($_POST["user"]);
 					}
 				} else{
 					echo "Oops! Something went wrong. Please try again later.";
@@ -30,30 +30,38 @@
 			}
 		}
 
-		if(empty(trim($_POST["password"]))){
-			$password_err = "Please enter a password.";     
-		} elseif(strlen(trim($_POST["password"])) < 6){
-			$password_err = "Password must have atleast 6 characters.";
+		if(empty(trim($_POST["email"]))){
+			$email_err = "Please enter a email.";     
 		} else{
-			$password = trim($_POST["password"]);
+			$email = trim($_POST["email"]);
 		}
 
-		if(empty(trim($_POST["confirm_password"]))){
-			$confirm_password_err = "Please confirm password.";     
+		if(empty(trim($_POST["pass"]))){
+			$pass_err = "Please enter a password.";     
+		} elseif(strlen(trim($_POST["pass"])) < 6){
+			$pass_err = "Password must have atleast 6 characters.";
 		} else{
-			$confirm_password = trim($_POST["confirm_password"]);
-			if(empty($password_err) && ($password != $confirm_password)){
-				$confirm_password_err = "Password did not match.";
+			$pass = trim($_POST["pass"]);
+		}
+
+		if(empty(trim($_POST["confirm_pass"]))){
+			$confirm_pass_err = "Please confirm password.";     
+		} else{
+			$confirm_pass = trim($_POST["confirm_pass"]);
+			if(empty($pass_err) && ($pass != $confirm_pass)){
+				$confirm_pass_err = "Password did not match.";
 			}
 		}
 
-		if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
-			$sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+		if(empty($user_err) && empty($email_err) && empty($pass_err) && empty($confirm_pass_err)){
+			$sql = "INSERT INTO avaness_user (user, email, pass) VALUES (:user, :email, :pass)";
 			if($stmt = $pdo->prepare($sql)){
-				$stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-				$stmt->bindParam(":password", $param_password, PDO::PARAM_STR);    
-				$param_username = $username;
-				$param_password = password_hash($password, PASSWORD_DEFAULT);
+				$stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
+				$stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
+				$stmt->bindParam(":pass", $param_pass, PDO::PARAM_STR);    
+				$param_user = $user;
+				$param_email = $email;
+				$param_pass = password_hash($pass, PASSWORD_DEFAULT);
 
 				if($stmt->execute()){	
 					header("location: log.php");
@@ -92,33 +100,34 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">account_circle</i>
-									<input id="icon_prefix" type="text" name="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>">
-									<span class="invalid-feedback"><?php echo $username_err; ?></span>
+									<input id="icon_prefix" type="text" name="user" class="<?php echo (!empty($user_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $user_err; ?></span>
 									<label for="icon_prefix">Username</label>
 								</div>
 							</div>
 						<div class="col s12 m3 l3"></div>
 					</div>
 
-					<!-- <div class="row">
+					<div class="row">
 						<div class="col s12 m6 l3"></div>
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">mail</i>
-									<input id="icon_email" type="email" class="validate">
+									<input id="icon_email" type="email" name="email" class="<?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $email_err; ?></span>
 									<label for="icon_email">E-mail</label>
 								</div>
 							</div>
 						<div class="col s12 m6 l3"></div>
-					</div> -->
+					</div>
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">more_horiz</i>
-									<input id="icon_pass" type="password" name="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-									<span class="invalid-feedback"><?php echo $password_err; ?></span>
+									<input id="icon_pass" type="password" name="pass" class="<?php echo (!empty($pass_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $pass_err; ?></span>
 									<label for="icon_pass">Password</label>
 								</div>
 							</div>
@@ -130,8 +139,8 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">more_horiz</i>
-									<input id="icon_pass2" type="password" name="confirm_password" class="<?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-									<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+									<input id="icon_pass2" type="password" name="confirm_pass" class="<?php echo (!empty($confirm_pass_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $confirm_pass_err; ?></span>
 									<label for="icon_pass2">Confirm password</label>
 								</div>
 							</div>

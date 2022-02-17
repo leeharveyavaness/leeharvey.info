@@ -20,7 +20,7 @@
 					<img src="../content/upload/pasha.jpg" alt="pasha" class="circle">
 				</a>
 				<a href="">
-					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" class="circle">
+					<img src="../content/upload/maxym.jpg" width="100px" height="100px" alt="" class="circle">
 				</a>
 				<a href="">
 					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" class="circle">

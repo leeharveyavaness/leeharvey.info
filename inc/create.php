@@ -29,7 +29,7 @@ $title_err = $anons_err = $content_err = "";
 
 
 		if(empty($title_err) && empty($anons_err) && empty($content_err)){
-			$sql = "INSERT INTO articles (title, anons, content) VALUES (:title, :anons, :content)";
+			$sql = "INSERT INTO avaness_post (title, anons, content) VALUES (:title, :anons, :content)";
 
 			if($stmt = $pdo->prepare($sql)){
 				$stmt->bindParam(":title", $param_title);
@@ -72,7 +72,7 @@ $title_err = $anons_err = $content_err = "";
 			<div class="row">
 				<h2 class="center">Створити пост</h2><br>
 				
-				<form action="create.php" method="post" enctype="multipart/form-data" class="col s12 center">
+				<form action="create" method="post" enctype="multipart/form-data" class="col s12 center">
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>

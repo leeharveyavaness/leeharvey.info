@@ -18,7 +18,7 @@
 
 		<div class="container">
 			<div class="row">
-				<h3 class="center">404 error!</h3>
+
 			</div>
 		</div>
 

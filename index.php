@@ -20,7 +20,7 @@
 		<div class="container">
 			<div class="row">
 				<?php
-				$sql = "SELECT * FROM articles ORDER BY id DESC";   
+				$sql = "SELECT * FROM avaness_post ORDER BY id DESC";   
 				$result = $pdo->query($sql);
 				if($result->rowCount() > 0){
 					while($row = $result->fetch()) : ?>
@@ -28,7 +28,7 @@
 					<div class="col s12 m6 l4">
 						<div class="card">
 							<div class="card-content">
-								<a href="post.php?id=<?php echo $row['id']; ?>" class="card-title"><?php echo $row['title']; ?></a>
+								<a href="post.php?id=<?php echo $row['id']; ?>" class="card-title truncate"><?php echo $row['title']; ?></a>
 								<p><?php echo $row['anons']; ?></p>
 								
 							</div>

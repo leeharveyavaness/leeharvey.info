@@ -4,7 +4,7 @@
 	
 		require_once "inc/db.php";
 
-		$sql = "SELECT * FROM articles WHERE id = :id";
+		$sql = "SELECT * FROM avaness_post WHERE id = :id";
 	
 		if($stmt = $pdo->prepare($sql)){
 		

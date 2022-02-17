@@ -7,30 +7,30 @@
 
 	require_once "db.php";
 
-	$username = $password = "";
-	$username_err = $password_err = $login_err = "";
+	$user = $pass = "";
+	$user_err = $pass_err = $login_err = "";
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-    		if(empty(trim($_POST["username"]))){
-			$username_err = "Please enter username.";
+    		if(empty(trim($_POST["user"]))){
+			$user_err = "Please enter username.";
 		} else{
-			$username = trim($_POST["username"]);
+			$user = trim($_POST["user"]);
 		}
 
-		if(empty(trim($_POST["password"]))){
-			$password_err = "Please enter your password.";
+		if(empty(trim($_POST["pass"]))){
+			$pass_err = "Please enter your password.";
 		} else{
-			$password = trim($_POST["password"]);
+			$pass = trim($_POST["pass"]);
 		}
 
-		if(empty($username_err) && empty($password_err)){
+		if(empty($user_err) && empty($pass_err)){
 
-			$sql = "SELECT id, username, password FROM users WHERE username = :username";
+			$sql = "SELECT id, user, pass FROM avaness_user WHERE user = :user";
 	
 			if($stmt = $pdo->prepare($sql)){
 	    
-				$stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-				$param_username = trim($_POST["username"]);
+				$stmt->bindParam(":user", $param_user, PDO::PARAM_STR);
+				$param_user = trim($_POST["user"]);
 	    
 	    
 	    			if($stmt->execute()){
@@ -38,16 +38,15 @@
 					if($stmt->rowCount() == 1){
 						if($row = $stmt->fetch()){
 							$id = $row["id"];
-							$username = $row["username"];
-							$hashed_password = $row["password"];
-							if(password_verify($password, $hashed_password)){
+							$user = $row["user"];
+							$hashed_password = $row["pass"];
+							if(password_verify($pass, $hashed_password)){
 			    
 								session_start();
-			    
-			    
+
 								$_SESSION["loggedin"] = true;
 								$_SESSION["id"] = $id;
-								$_SESSION["username"] = $username;                            
+								$_SESSION["user"] = $user;                            
 			    
 			    
 								header("location: ../index.php");
@@ -94,8 +93,8 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">account_circle</i>
-									<input id="icon_prefix" type="text" name="username" class="<?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>">
-									<span class="invalid-feedback"><?php echo $username_err; ?></span>
+									<input id="icon_prefix" type="text" name="user" class="<?php echo (!empty($user_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $user_err; ?></span>
 									<label for="icon_prefix">Username</label>
 								</div>
 							</div>
@@ -107,8 +106,8 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">more_horiz</i>
-									<input id="icon_pass" type="password" name="password" class="<?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-									<span class="invalid-feedback"><?php echo $password_err; ?></span>
+									<input id="icon_pass" type="password" name="pass" class="<?php echo (!empty($pass_err)) ? 'is-invalid' : ''; ?>">
+									<span class="error"><?php echo $pass_err; ?></span>
 									<label for="icon_pass">Password</label>
 								</div>
 							</div>
