@@ -18,7 +18,7 @@
 
 		<div class="container">
 			<div class="row">
-
+				<h3 class="center error">401</h3>
 			</div>
 		</div>
 

@@ -1,8 +1,8 @@
 <?php
-require_once 'db.php';
+	require_once 'db.php';
 
-$title = $anons = $content = "";
-$title_err = $anons_err = $content_err = "";
+	$title = $anons = $content = "";
+	$title_err = $anons_err = $content_err = "";
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -41,7 +41,7 @@ $title_err = $anons_err = $content_err = "";
 				$param_content = $content;
 
 				if($stmt->execute()){
-					header("location: ../index.php");
+					header("location: ../");
 					exit();
 				} else{
 					echo "Oops! Something went wrong. Please try again later.";
@@ -59,7 +59,7 @@ $title_err = $anons_err = $content_err = "";
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Create post | Avaness</title>
+		<title>Create post | Avaness Alpha</title>
 	</head>
 	<body>
 
@@ -72,7 +72,7 @@ $title_err = $anons_err = $content_err = "";
 			<div class="row">
 				<h2 class="center">Створити пост</h2><br>
 				
-				<form action="create" method="post" enctype="multipart/form-data" class="col s12 center">
+				<form action="create" method="post" class="col s12 center">
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>

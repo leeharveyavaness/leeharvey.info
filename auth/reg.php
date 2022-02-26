@@ -1,6 +1,6 @@
 <?php
 
-	require_once "db.php";
+	require_once "../inc/db.php";
  
 	$user = $email = $pass = $confirm_pass = "";
 	$user_err = $email_err = $pass_err = $confirm_pass_err = "";
@@ -78,22 +78,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<?php require 'head.php'; ?>
+		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
 		<title>Reg | Avaness</title>
 	</head>
 	<body>
 
 		<?php 
-			require 'nav.php';
-			require 'switch.php';
+			require '../inc/nav.php';
+			require '../inc/switch.php';
 		?>
 
 		<div class="container">
 			<div class="row">
 				<h2 class="center">Реєстрація</h2><br>
-				<p class="center">Є профіль? <a href="log.php">Увійти</a></p>
-				<form action="reg.php" method="post" class="col s12">
+				<p class="center">Є профіль? <a href="log">Увійти</a></p>
+				<form action="reg.php" method="post" class="col s12 center">
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>
@@ -146,7 +146,7 @@
 							</div>
 						<div class="col s12 m6 l3"></div>
 					</div>
-					<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+					<button class="btn waves-effect waves-light" type="submit" name="action">Reg
 						<i class="material-icons right">send</i>
 					</button>
 
@@ -156,8 +156,8 @@
 		</div><br>
 
 		<?php 
-			require 'footer.php';
-			require 'script.php';
+			require '../inc/footer.php';
+			require '../inc/script.php';
 		?>
 	
 	</body>

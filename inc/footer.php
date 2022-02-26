@@ -9,24 +9,24 @@
 				<h3 class="center">Avaness</h3>
 				<p>Тут зазвичай розміщюється службова інформація яка нікому не цікава :) Прохання, якщо вам цей сайт був корисним, то добавте його до закладок (Ctrl/⌘+D)</p>
 				<p>Мої соцмережі:</p>
-				<a href="" style="font-size: 63px;"><i class="fa fa-telegram"></i></a>
-				<a href="" style="font-size: 63px;"><i class="fa fa-vk"></i></a>
-				<a href="" style="font-size: 63px;"><i class="fa fa-facebook"></i></a>
+				<a target="_blank" href="" style="font-size: 63px;"><i class="fa fa-telegram"></i></a>
+				<a target="_blank" href="" style="font-size: 63px;"><i class="fa fa-vk"></i></a>
+				<a target="_blank" href="https://www.facebook.com/retromaniya2007" style="font-size: 63px;"><i class="fa fa-facebook"></i></a>
 			</div>
 			<div class="col l6 s12">
 				<h3 class="center">Подяка людям</h3>
 				<p>Хочу подякувати тим людям, які зробили свій внесок у розвиток сайту і зробили свій вклад у моє життя!</p>
 				<a href="">
-					<img src="../content/upload/pasha.jpg" alt="pasha" class="circle">
+					<img src="../content/upload/pasha.jpg" alt="pasha" title="Pasha Kharkovsky" class="circle">
 				</a>
 				<a href="">
-					<img src="../content/upload/maxym.jpg" width="100px" height="100px" alt="" class="circle">
+					<img src="../content/upload/maxym.jpg" width="100px" height="100px" alt="" title="Maxym Solodky" class="circle">
 				</a>
 				<a href="">
-					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" class="circle">
+					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" title="" class="circle">
 				</a>
 				<a href="">
-					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" class="circle">
+					<img src="../content/upload/gray.jpg" width="100px" height="100px" alt="" title="" class="circle">
 				</a>
 			</div>
 		</div>

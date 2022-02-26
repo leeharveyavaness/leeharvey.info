@@ -5,7 +5,7 @@
 		exit;
 	}
 
-	require_once "db.php";
+	require_once "../inc/db.php";
 
 	$user = $pass = "";
 	$user_err = $pass_err = $login_err = "";
@@ -71,21 +71,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<?php require 'head.php'; ?>
+		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
 		<title>Log in | Avaness</title>
 	</head>
 	<body>
 
 		<?php 
-			require 'nav.php';
-			require 'switch.php';
+			require '../inc/nav.php';
+			require '../inc/switch.php';
 		?>
 
 		<div class="container">
 			<div class="row">
 				<h2 class="center">Вхід</h2><br>
-				<p class="center">Нема профілю? <a href="reg.php">Зареєструйтеся</a></p>
+				<p class="center">Нема профілю? <a href="reg">Зареєструйтеся</a></p>
 				<form action="log.php" method="post" class="col s12 center">
 
 					<div class="row">
@@ -114,9 +114,8 @@
 						<div class="col s12 m6 l3"></div>
 					</div>
 
-					<button class="btn waves-effect waves-light" type="submit" name="action">Submit
-						<i class="material-icons right">send</i>
-					</button>
+					<button class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+					<a href="../inc/reset" class="btn waves-effect waves-light">Reset password</a>
 
 				</form>
 				
@@ -124,8 +123,8 @@
 		</div><br>
 
 		<?php 
-			require 'footer.php';
-			require 'script.php';
+			require '../inc/footer.php';
+			require '../inc/script.php';
 		?>
 	
 	</body>

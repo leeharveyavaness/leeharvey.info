@@ -3,7 +3,7 @@
 }
 
 *::selection {
-	background: #fb9805;
+	background: #34A853;
 }
 
 :root {
@@ -158,7 +158,7 @@ nav .nav-wrapper {
 
 nav {
 	color: #fff;
-	background-color: #fb9805;
+	background-color: #34A853;
 	width: 100%;
 	height: 65px;
 	border-radius: 19px;
@@ -169,7 +169,7 @@ nav a {
 }
 
 a {
-	color: #fb9805;
+	color: #34A853;
 	cursor: pointer;
 }
 
@@ -247,7 +247,7 @@ figure {
 }
 
 .sidenav li>a {
-	color: #fb9805;
+	color: #34A853;
 	display: block;
 	font-size: 14px;
 	font-weight: 500;
@@ -294,4 +294,34 @@ figure {
 	background: var(--background);
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
+}
+
+nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
+	border: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 19px;
+}
+
+.breadcrumb {
+	background: var(--background);
+	color: var(--text-color);
+	transition: background 500ms ease-in-out, color 200ms ease;
+}
+
+.breadcrumb:last-child {
+	color: var(--text-color);
+}
+
+.breadcrumb:before {
+	content: '\E5CC';
+	color: var(--text-color);
+	vertical-align: top;
+	display: inline-block;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	margin: 0 10px 0 8px;
+	-webkit-font-smoothing: antialiased;
 }

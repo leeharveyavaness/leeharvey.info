@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Test | Avaness</title>
+		<title>Test | Avaness Alpha</title>
 	</head>
 	<body>
 
@@ -18,7 +18,8 @@
 
 		<div class="container">
 			<div class="row">
-
+				<h4 class="center" id="clock"><script>currentTime();</script></h4>
+				<h5 class="center"><script>document.write(months[month] + " "+ day +" "+ year);</script></h5><br>				
 			</div>
 		</div>
 

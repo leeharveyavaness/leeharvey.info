@@ -41,7 +41,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title><?php echo $row['title']; ?> | Avaness</title>
+		<title><?php echo $row['title']; ?> | Avaness Alpha</title>
 	</head>
 	<body>
 
@@ -49,6 +49,13 @@
 			require 'inc/nav.php';
 			require 'inc/switch.php';
 		?>
+
+		<div class="nav-wrapper center">
+			<div class="col s12">
+				<a href="/" class="breadcrumb">Home</a>
+				<a class="breadcrumb"><?php echo $row['title']; ?></a>
+			</div>
+		</div><br>
 
 		<div class="container">
 			<div class="row">

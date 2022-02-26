@@ -7,7 +7,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>401 | Avaness</title>
+		<title>404 | Avaness</title>
 	</head>
 	<body>
 
@@ -18,7 +18,7 @@
 
 		<div class="container">
 			<div class="row">
-				<h3 class="center">404 error!</h3>
+				<h3 class="center error">404</h3>
 			</div>
 		</div>
 

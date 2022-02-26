@@ -1,7 +1,7 @@
 <?php require 'db.php';
 
 	if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-		header("location: log.php");
+		header("location: ../auth/log");
 		exit;
 	}
 ?>
@@ -11,7 +11,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Admin | Avaness</title>
+		<title>Admin | Avaness Alpha</title>
 	</head>
 	<body>
 
@@ -34,7 +34,7 @@
 								<span class="card-title truncate"><?php echo $row['title']; ?></span>
 								<a href="../post.php?id=<?= $row['id'] ?>" class="btn-floating" title="View Record"><i class="material-icons">remove_red_eye</i></a>
 								<a href="update.php?id=<?php echo $row['id']; ?>" class="btn-floating" title="Update post"><i class="material-icons">edit</i></a>
-								<a href="delete.php?id=<?php echo $row['id']; ?>" class="btn-floating" title="Delete post"><i class="material-icons">delete</i></a>
+								<a href="delete.php?id=<?php echo $row['id']; ?>" class="btn-floating red" title="Delete post"><i class="material-icons">delete</i></a>
 							</div>
       						</div>
     					</div>

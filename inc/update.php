@@ -45,7 +45,7 @@
 		
 		
 				if($stmt->execute()){
-					header("location: ../index.php");
+					header("location: ../");
 					exit();
 				} else{
 					echo "Oops! Something went wrong. Please try again later.";
@@ -92,7 +92,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Update post | Avaness</title>
+		<title>Update post | Avaness Alpha</title>
 	</head>
 	<body>
 
@@ -105,7 +105,7 @@
 			<div class="row">
 				<h2 class="center">Оновити пост</h2><br>
 				
-				<form action="update.php" method="post" enctype="multipart/form-data" class="col s12">
+				<form action="update" method="post" class="col s12 center">
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>

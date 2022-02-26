@@ -5,5 +5,5 @@ $_SESSION = array();
 
 session_destroy();
 
-header("location: inc/log.php");
+header("location: auth/log.php");
 exit;
