@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Test | Avaness Alpha</title>
+		<title>Test | Avaness</title>
 	</head>
 	<body>
 

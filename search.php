@@ -19,7 +19,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Search... | Avaness Alpha</title>
+		<title>Search... | Avaness</title>
 		
 	</head>
 	<body>

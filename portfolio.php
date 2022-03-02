@@ -1,24 +1,34 @@
+<?php 
+	require_once 'inc/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-                <meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/portfolio.css">
+		<?php require 'inc/head.php'; ?>
+		<link rel="stylesheet" href="css/main.css">
 		<title>Home | Avaness</title>
 	</head>
 	<body>
 
+		<?php 
+			require 'inc/nav.php';
+			require 'inc/switch.php';
+		?>
+
 		<div class="container">
-			<div class="box">
-				<img src="content/upload/avaness.jpeg" alt="">
-				<img src="content/upload/apple.jpg" alt="">
+			<div class="row">
+				<h3 class="center">Portfolio</h3>
+					<video class="responsive-video" controls>
+						<source width="853" height="480" src="video/1.mp4" type="video/mp4">
+					</video>
 			</div>
 		</div>
 
-                <a href="/">На головну</a>
+		<?php 
+			require 'inc/footer.php';
+			require 'inc/script.php';
+		?>
 
-		<script src="js/main.js"></script>
-	
 	</body>
 </html>

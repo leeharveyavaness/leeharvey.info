@@ -10,7 +10,6 @@
 				<p>Тут зазвичай розміщюється службова інформація яка нікому не цікава :) Прохання, якщо вам цей сайт був корисним, то добавте його до закладок (Ctrl/⌘+D)</p>
 				<p>Мої соцмережі:</p>
 				<a target="_blank" href="" style="font-size: 63px;"><i class="fa fa-telegram"></i></a>
-				<a target="_blank" href="" style="font-size: 63px;"><i class="fa fa-vk"></i></a>
 				<a target="_blank" href="https://www.facebook.com/retromaniya2007" style="font-size: 63px;"><i class="fa fa-facebook"></i></a>
 			</div>
 			<div class="col l6 s12">

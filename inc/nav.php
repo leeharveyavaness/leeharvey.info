@@ -38,7 +38,7 @@
 	<div class="nav-wrapper">
 		<div class="container">
 			<div class="row">
-				<a href="/" class="brand-logo">Avaness Alpha</a>
+				<a href="/" class="brand-logo">Avaness</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<?php if(isset($_SESSION['loggedin'])) : ?>
 						<li><a href="../about">About</a></li>
