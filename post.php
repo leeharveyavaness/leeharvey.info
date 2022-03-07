@@ -39,6 +39,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta property="og:url" content="http://leeharvey.info/post.php?id=<?php echo $row['id']; ?>" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="<?php echo $row['title']; ?>" />
+		<meta property="og:description" content="<?php echo $row['anons']; ?>" />
+		<meta property="og:image" content="http://leeharvey.info/content/upload/1.jpg" />
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
 		<title><?php echo $row['title']; ?> | Avaness</title>
@@ -64,11 +69,10 @@
 					<div class="card">
 						<div class="card-content">
                                                         <h3 class="center"><?php echo $row['title']; ?></h3>
-							<p><?php echo $row['content']; ?></p><br>
+							<p><?php echo $row['content']; ?></p>
 							<h5>Share this post</h5>
-							<p>ddosify -t rbc.ru -d 86400 -n 500000</p>
-							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-facebook"></i></a>
 							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-telegram"></i></a>
+							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://leeharvey.info/post?id=<?php echo $row['id']; ?>" style="font-size: 35px;"><i class="fa fa-facebook"></i></a>
 							<a target="_blank" href="" style="font-size: 35px;"><i class="fa fa-twitter"></i></a>
 						</div>
       					</div>

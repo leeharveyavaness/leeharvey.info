@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Home | Avaness</title>
+		<title>Homeлпморпсм | Avaness</title>
 	</head>
 	<body>
 
@@ -18,6 +18,7 @@
 
 		<div class="container">
 			<div class="row">
+
 				<div class="chip center">
 					Русский военный корабль, иди нахуй!
 					<i class="close material-icons">close</i>
@@ -43,33 +44,8 @@
 
 		<div class="container">
 			<div class="row">
-				<h4 class="center" id="clock"><script>currentTime();</script></h4>
-				<h5 class="center"><script>document.write(months[month] + " "+ day +" "+ year);</script></h5><br>
-				
-			<?php
-				$sql = "SELECT * FROM avaness_post ORDER BY id DESC";   
-				$result = $pdo->query($sql);
-				if($result->rowCount() > 0){
-					while($row = $result->fetch()) : ?>
-
-					<div class="col s12 m6 l4">
-						<div class="card">
-							<div class="card-content">
-								<a href="post.php?id=<?php echo $row['id']; ?>" class="card-title truncate"><?php echo $row['title']; ?></a>
-								<p><?php echo $row['anons']; ?></p>
-								
-							</div>
-						</div>
-					</div>
-
-				<?php
-					endwhile;
-				} else{
-					echo "<h3>No records matching your query were found.</h3>";
-				}
-				
-			?>
-
+				<h3 class="center">До літа залишилося:</h3>
+				<h3 id="demo" class="center"></h3>
 			</div>
 		</div>
 
@@ -77,6 +53,27 @@
 			require 'inc/footer.php';
 			require 'inc/script.php';
 		?>
+
+		<script>
+			var countDownDate = new Date("Jun 1, 2022 00:00:00").getTime();
+			var x = setInterval(function() {
+				var now = new Date().getTime();
+
+				var distance = countDownDate - now;
+
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "EXPIRED";
+				}
+			}, 1000);
+		</script>
 
 	</body>
 </html>

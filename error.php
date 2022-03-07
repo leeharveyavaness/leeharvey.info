@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Error | Avaness</title>
+		<title>Error 404| Avaness</title>
 	</head>
 	<body>
 

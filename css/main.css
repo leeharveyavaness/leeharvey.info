@@ -177,6 +177,10 @@ li a {
 	color: #fff
 }
 
+p {
+	font-size: 14px;
+}
+
 div.fixed-action-btn {
 	cursor: pointer;
 	display: none;
@@ -193,13 +197,6 @@ figure {
 
 .justify {
 	text-align: justify;
-}
-
-.card {
-	background: var(--color-card);
-	color: var(--text-color);
-	transition: background 500ms ease-in-out, color 200ms ease;
-	border-radius: 19px;
 }
 
 .card .card-image img {
@@ -272,6 +269,10 @@ figure {
 	color: #fb9805;
 }
 
+.yellow {
+	color: #FBBC05;
+}
+
 .red {
 	color: #EA4335;
 }
@@ -282,6 +283,10 @@ figure {
 
 .green {
 	color: #34A853;
+}
+
+.blue {
+	color: #4285F4;
 }
 
 .copyright {
@@ -330,4 +335,33 @@ img.responsive-img, video.responsive-video {
 	max-width: 100%;
 	height: auto;
 	border-radius: 23px;
+}
+
+.chip {
+	display: inline-block;
+	width: 100%;
+	height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(0,0,0,0.6);
+	line-height: 32px;
+	padding: 0 12px;
+	border-radius: 8px;
+	background-color: #4285F4;
+	color: #FBBC05;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+
+.card {
+	position: relative;
+	margin: 0.5rem 0 1rem 0;
+	-webkit-transition: -webkit-box-shadow .25s;
+	transition: -webkit-box-shadow .25s;
+	transition: box-shadow .25s;
+	transition: box-shadow .25s, -webkit-box-shadow .25s;
+	background: var(--color-card);
+	color: var(--text-color);
+	transition: background 500ms ease-in-out, color 200ms ease;
+	border-radius: 19px;
 }

