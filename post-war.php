@@ -4,7 +4,7 @@
 	
 		require_once "inc/db.php";
 
-		$sql = "SELECT * FROM avaness_post WHERE id = :id";
+		$sql = "SELECT * FROM avaness_war WHERE id = :id";
 	
 		if($stmt = $pdo->prepare($sql)){
 		
@@ -75,7 +75,7 @@
 							<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" style="font-size: 35px;"><i class="fa fa-facebook"></i></a>
 							<a target="_blank" href="https://twitter.com/share?url=http://leeharvey.info/post?id=<?php echo $row['id']; ?>&text=<?php echo $row['title']; ?>&hashtags=avaness" style="font-size: 35px;"><i class="fa fa-twitter"></i></a>
 							<a target="_blank" href="https://t.me/share/url?url=http://leeharvey.info/post?id=<?php echo $row['id']; ?>&text=<?php echo $row['title']; ?>" style="font-size: 35px;"><i class="fa fa-telegram"></i></a>
-							<a onclick="copyToClipboard()" style="font-size: 35px;"><i class="material-icons">content_copy</i></a>
+							<a onclick="copyToClipboard()" style="font-size: 35px;" href=""><i class="fa fa-link"></i></a>
 
 						</div>
       					</div>

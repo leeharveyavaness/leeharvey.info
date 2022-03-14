@@ -45,7 +45,7 @@ body {
 	color: var(--text-color);
 	transition: background 500ms ease-in-out, color 200ms ease;
 }
-      
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-mode: 'dark';
@@ -365,3 +365,18 @@ img.responsive-img, video.responsive-video {
 	transition: background 500ms ease-in-out, color 200ms ease;
 	border-radius: 19px;
 }
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 35px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+      }

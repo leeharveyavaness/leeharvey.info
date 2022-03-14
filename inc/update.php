@@ -136,7 +136,7 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">create</i>
-									<textarea id="textarea1" name="content" class="materialize-textarea" value="<?php echo $content; ?>"></textarea>
+									<textarea id="textarea1" name="content"  class="materialize-textarea" value="<?php echo $content; ?>"></textarea>
 									<label for="textarea1">Content</label>
 								</div>
 							</div>

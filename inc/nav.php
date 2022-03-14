@@ -1,6 +1,7 @@
 <ul id="dropdown1" class="dropdown-content">
 	<li><a href="../inc/admin">Admin</a></li>
 	<li><a href="../music">Music</a></li>
+	<li><a href="../inc/generate">Generator</a></li>
 	<li class="divider"></li>
         <li><a href="../inc/create">Add Post</a></li>
 	<li><a href="../inc/add-music">Add Music</a></li>
@@ -22,8 +23,10 @@
 			<li><a href="../about">About</a></li>
 			<li><a href="../feedback">Feedback</a></li>
 			<li><a href="../portfolio">Portfolio</a></li>
+			<li><a href="../war">War</a></li>
 			<li><a href="../inc/admin">Admin</a></li>
 			<li><a href="../music">Music</a></li>
+			<li><a href="../inc/generate">Generator</a></li>
                         <li><a href="../inc/create">Add Post</a></li>
 			<li><a href="../inc/add-music">Add Music</a></li>
 			<li><a href="../logout">Logout</a></li>
@@ -31,6 +34,7 @@
 			<li><a href="../about">About</a></li>
 			<li><a href="../feedback">Feedback</a></li>
 			<li><a href="../portfolio">Portfolio</a></li>
+			<li><a href="../war">War</a></li>
 			<li><a href="#"></a></li>
 		<?php endif; ?>
 	</ul>
@@ -44,11 +48,13 @@
 						<li><a href="../about">About</a></li>
 						<li><a href="../feedback">Feedback</a></li>
 						<li><a href="../portfolio">Portfolio</a></li>
+						<li><a href="../war">War</a></li>
 						<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 					<?php else : ?>
 						<li><a href="../about">About</a></li>
 						<li><a href="../feedback">Feedback</a></li>
 						<li><a href="../portfolio">Portfolio</a></li>
+						<li><a href="../war">War</a></li>
 						<li><a href="#"></a></li>
 					<?php endif; ?>
 				</ul>
