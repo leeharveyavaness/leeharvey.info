@@ -5,7 +5,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Infa pro mene | Avaness</title>
+		<title>Infa pro mene | Avaness Global</title>
 	</head>
 	<body>
 

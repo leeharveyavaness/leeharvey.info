@@ -80,7 +80,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Reg | Avaness</title>
+		<title>Reg | Avaness Global</title>
 	</head>
 	<body>
 

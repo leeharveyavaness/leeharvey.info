@@ -7,7 +7,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>404 | Avaness</title>
+		<title>404 Not found | Avaness Global</title>
 	</head>
 	<body>
 

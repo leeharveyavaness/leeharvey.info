@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Coming Soon | Avaness</title>
+		<title>Coming Soon | Avaness Global</title>
 	</head>
 	<body>
 
@@ -27,7 +27,7 @@
 			require 'inc/script.php';
 		?>
 
-		<script>
+		<script> // w3school
 			var countDownDate = new Date("Jun 1, 2022 00:00:00").getTime();
 
 			var x = setInterval(function() {

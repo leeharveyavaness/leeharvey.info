@@ -7,7 +7,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>500 | Avaness</title>
+		<title>500 | Avaness Global</title>
 	</head>
 	<body>
 

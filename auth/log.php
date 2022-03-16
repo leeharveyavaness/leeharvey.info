@@ -73,7 +73,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Log in | Avaness</title>
+		<title>Log in | Avaness Global</title>
 	</head>
 	<body>
 
@@ -86,7 +86,7 @@
 			<div class="row">
 				<h2 class="center">Вхід</h2><br>
 				<p class="center">Нема профілю? <a href="reg">Зареєструйтеся</a></p>
-				<form action="log.php" method="post" class="col s12 center">
+				<form action="log" method="post" class="col s12 center">
 
 					<div class="row">
 						<div class="col s12 m3 l3"></div>

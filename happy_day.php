@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Homeлпморпсм | Avaness</title>
+		<title>Happy | Avaness Global</title>
 	</head>
 	<body>
 
@@ -20,25 +20,9 @@
 			<div class="row">
 
 				<div class="chip center">
-					Русский военный корабль, иди нахуй!
+					Русский военный корабль, иди нах*й!
 					<i class="close material-icons">close</i>
 				</div>
-			</div>
-		</div><br>
-
-		<div class="container">
-			<div class="row">
-				<nav>
-					<div class="nav-wrapper">
-						<form action="search" method="post">
-							<div class="input-field">
-								<input id="search" type="search" placeholder="Search..." name="search">
-								<label class="label-icon" for="search"><i class="material-icons">search</i></label>
-								<i class="material-icons">close</i>
-							</div>
-						</form>
-					</div>
-				</nav>
 			</div>
 		</div><br>
 

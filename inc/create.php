@@ -59,7 +59,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Create post | Avaness Alpha</title>
+		<title>Create post | Avaness Global</title>
 	</head>
 	<body>
 
@@ -103,6 +103,18 @@
 							<div class="col s12 m6 l6">
 								<div class="input-field col s12">
 									<i class="material-icons prefix">create</i>
+									<input id="icon_prefix" type="text" name="tags">
+									<label for="icon_prefix">Tags</label>
+								</div>
+							</div>
+						<div class="col s12 m3 l3"></div>
+					</div>
+
+					<div class="row">
+						<div class="col s12 m3 l3"></div>
+							<div class="col s12 m6 l6">
+								<div class="input-field col s12">
+									<i class="material-icons prefix">create</i>
 									<textarea id="textarea1" name="content" class="materialize-textarea"></textarea>
 									<label for="textarea1">Content</label>
 								</div>
@@ -110,9 +122,7 @@
 						<div class="col s12 m6 l3"></div>
 					</div>
 
-					<button class="btn waves-effect waves-light" type="submit" name="submit">Create
-						<i class="material-icons right">send</i>
-					</button>
+					<button class="btn waves-effect waves-light" type="submit" name="submit">Create</button>
 
 				</form>
 				

@@ -91,7 +91,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Feedback | Avaness</title>
+		<title>Feedback | Avaness Global</title>
 	</head>
 	<body>
 
@@ -102,8 +102,8 @@
 
 		<div class="container">
 			<div class="row">
-				<h2 class="center">Feedback</h2><br>
-				<p></p>
+				<h3 class="center">Feedback</h3><br>
+				<p class="center txt">Тут ви можете відправити нам своє питання, пропозицію чи скаргу і ми в найближчий час відповімо Вам</p>
 				<form action="feedback" method="post" class="col s12 center">
 
 					<div class="row">

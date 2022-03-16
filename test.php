@@ -18,8 +18,7 @@
 
 		<div class="container">
 			<div class="row">
-				<h4 class="center" id="clock"><script>currentTime();</script></h4>
-				<h5 class="center"><script>document.write(months[month] + " "+ day +" "+ year);</script></h5><br>				
+								
 			</div>
 		</div>
 

@@ -11,7 +11,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Admin | Avaness Alpha</title>
+		<title>Admin | Avaness Global</title>
 	</head>
 	<body>
 

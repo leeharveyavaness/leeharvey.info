@@ -7,7 +7,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>403 Forbidden | Avaness</title>
+		<title>403 Forbidden | Avaness Global</title>
 	</head>
 	<body>
 

@@ -147,7 +147,7 @@ nav .brand-logo {
 	position: absolute;
 	color: #fff;
 	display: inline-block;
-	font-size: 2.1rem;
+	font-size: 23px;
 	padding: 0;
 }
 
@@ -379,4 +379,53 @@ img.responsive-img, video.responsive-video {
 	word-wrap: normal;
 	direction: ltr;
 	-webkit-font-smoothing: antialiased;
-      }
+}
+
+.txt {
+	font-size: 17px;
+}
+
+.calculator {
+	position: relative;
+	display: grid;
+}
+
+.container .calculator .value {
+	grid-column: span 4;
+	height: 140px;
+	width: 300px;
+	text-align: right;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 30px;
+}
+
+.container .calculator span {
+	display: grid;
+	place-items: center;
+	width: 75px;
+	height: 75px;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.container .calculator span:hover {
+	transition: 0s;
+	background: var(--color-card);
+}
+
+.container .calculator span:active {
+	background: #fb9805;
+	color: #fff;
+}
+
+.container .calculator .clear {
+	grid-column: span 2;
+	width: 75px;
+}
+
+.container .calculator .plus {
+	grid-row: span 2;
+	width: 75px;
+}

@@ -46,7 +46,7 @@
 		<meta property="og:description" content="<?php echo $row['anons']; ?>" />
 		<meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
 		<link rel="stylesheet" href="css/main.css">
-		<title><?php echo $row['title']; ?> | Avaness</title>
+		<title><?php echo $row['title']; ?> | Avaness Global</title>
 	</head>
 	<body>
 

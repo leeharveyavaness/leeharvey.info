@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Reset password | Avaness Alpha</title>
+		<title>Reset password | Avaness Global</title>
 	</head>
 	<body>
 

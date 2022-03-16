@@ -7,7 +7,7 @@
 	<head>
 		<?php require 'inc/head.php'; ?>
 		<link rel="stylesheet" href="css/main.css">
-		<title>Home | Avaness</title>
+		<title>Home | Avaness Global</title>
 	</head>
 	<body>
 
@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="chip center">
-					Русский военный корабль, иди нахуй!
+					Русский военный корабль, иди нах*й!
 					<i class="close material-icons">close</i>
 				</div>
 			</div>
@@ -43,9 +43,7 @@
 
 		<div class="container">
 			<div class="row">
-				<h4 class="center error">24 лютого 2022 року РФ почала повномасштабну війну проти України, проти її свободи, незалежності, демократії</h4>
-				<h4 class="center error" id="clock"><script>currentTime();</script></h4>
-				<h5 class="center error"><script>document.write(months[month] + " "+ day +" "+ year);</script></h5><br>
+				<!-- <h4 class="center error">24 лютого 2022 року РФ почала повномасштабну війну проти України, проти її свободи, незалежності, демократії</h4><br> -->
 				
 			<?php
 				$sql = "SELECT * FROM avaness_post ORDER BY id DESC";   

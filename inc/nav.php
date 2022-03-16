@@ -1,10 +1,14 @@
 <ul id="dropdown1" class="dropdown-content">
+	<li><a href="../feat/generate">Generator</a></li>
+	<li><a href="../feat/calc">Calculator</a></li>
+	<li><a href="">Test2</a></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
 	<li><a href="../inc/admin">Admin</a></li>
-	<li><a href="../music">Music</a></li>
-	<li><a href="../inc/generate">Generator</a></li>
+	<li><a href="../feat/music">Music</a></li>
 	<li class="divider"></li>
         <li><a href="../inc/create">Add Post</a></li>
-	<li><a href="../inc/add-music">Add Music</a></li>
 	<li class="divider"></li>
 	<li><a href="../logout">Logout</a></li>
 </ul>
@@ -22,19 +26,19 @@
 		<?php if(isset($_SESSION['loggedin'])) : ?>
 			<li><a href="../about">About</a></li>
 			<li><a href="../feedback">Feedback</a></li>
-			<li><a href="../portfolio">Portfolio</a></li>
+			<li><a href="../feat/portfolio">Portfolio</a></li>
 			<li><a href="../war">War</a></li>
+			<li><a href="../feat/generate">Generator</a></li>
 			<li><a href="../inc/admin">Admin</a></li>
-			<li><a href="../music">Music</a></li>
-			<li><a href="../inc/generate">Generator</a></li>
+			<li><a href="../feat/music">Music</a></li>
                         <li><a href="../inc/create">Add Post</a></li>
-			<li><a href="../inc/add-music">Add Music</a></li>
 			<li><a href="../logout">Logout</a></li>
 		<?php else : ?>
 			<li><a href="../about">About</a></li>
 			<li><a href="../feedback">Feedback</a></li>
-			<li><a href="../portfolio">Portfolio</a></li>
+			<li><a href="../feat/portfolio">Portfolio</a></li>
 			<li><a href="../war">War</a></li>
+			<li><a href="../feat/generate">Generator</a></li>
 			<li><a href="#"></a></li>
 		<?php endif; ?>
 	</ul>
@@ -42,19 +46,21 @@
 	<div class="nav-wrapper">
 		<div class="container">
 			<div class="row">
-				<a href="/" class="brand-logo">Avaness</a>
+				<a href="/" class="brand-logo">Avaness Global</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<?php if(isset($_SESSION['loggedin'])) : ?>
 						<li><a href="../about">About</a></li>
 						<li><a href="../feedback">Feedback</a></li>
-						<li><a href="../portfolio">Portfolio</a></li>
+						<li><a href="../feat/portfolio">Portfolio</a></li>
 						<li><a href="../war">War</a></li>
-						<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Features<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Menu<i class="material-icons right">arrow_drop_down</i></a></li>
 					<?php else : ?>
 						<li><a href="../about">About</a></li>
 						<li><a href="../feedback">Feedback</a></li>
-						<li><a href="../portfolio">Portfolio</a></li>
+						<li><a href="../feat/portfolio">Portfolio</a></li>
 						<li><a href="../war">War</a></li>
+						<li><a href="../feat/generate">Generator</a></li>
 						<li><a href="#"></a></li>
 					<?php endif; ?>
 				</ul>

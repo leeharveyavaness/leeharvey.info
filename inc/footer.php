@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col l6 s12">
-				<h3 class="center">Avaness</h3>
+				<h3 class="center">Avaness Global</h3>
 				<p>Тут зазвичай розміщюється службова інформація яка нікому не цікава :) Прохання, якщо вам цей сайт був корисним, то добавте його до закладок (Ctrl/⌘+D)</p>
 				<p>Мої соцмережі:</p>
 				<a target="_blank" href="https://t.me/avanessglobal" style="font-size: 50px;"><i class="fa fa-telegram"></i></a>

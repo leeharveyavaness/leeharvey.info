@@ -92,7 +92,7 @@
 	<head>
 		<?php require 'head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Update post | Avaness Alpha</title>
+		<title>Update post | Avaness Global</title>
 	</head>
 	<body>
 

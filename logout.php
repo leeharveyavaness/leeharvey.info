@@ -1,9 +1,9 @@
 <?php
-session_start();
+	session_start();
 
-$_SESSION = array();
+	$_SESSION = array();
 
-session_destroy();
+	session_destroy();
 
-header("location: auth/log.php");
-exit;
+	header("location: auth/log.php");
+	exit;
