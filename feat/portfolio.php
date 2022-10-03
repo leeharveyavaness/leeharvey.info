@@ -7,7 +7,7 @@
 	<head>
 		<?php require '../inc/head.php'; ?>
 		<link rel="stylesheet" href="../css/main.css">
-		<title>Home | Avaness Global</title>
+		<title>Portfolio | Avaness Global</title>
 	</head>
 	<body>
 
@@ -19,9 +19,9 @@
 		<div class="container">
 			<div class="row">
 				<h3 class="center">Portfolio</h3>
-					<video class="responsive-video" controls>
-						<source width="853" height="480" src="video/1.mp4" type="video/mp4">
-					</video>
+					<iframe width="48%" height="315" src="https://www.youtube.com/embed/rsaIXs8oCqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="48%" height="315" src="https://www.youtube.com/embed/FCfaJz4ASHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="48%" height="315" src="https://www.youtube.com/embed/l0QUsyq4loQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 

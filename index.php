@@ -19,7 +19,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="chip center">
-					Русский военный корабль, иди нах*й!
+					УКРАЇНА ПЕРЕМОЖЕ!!! БОГ НЕ ПОМЕР
 					<i class="close material-icons">close</i>
 				</div>
 			</div>

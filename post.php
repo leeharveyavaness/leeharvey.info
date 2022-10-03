@@ -89,16 +89,16 @@
 			require 'inc/script.php';
 		?>
 
-<script>
-function copyToClipboard(text) {
-var inputc = document.body.appendChild(document.createElement("input"));
-inputc.value = window.location.href;
-inputc.focus();
-inputc.select();
-document.execCommand('copy');
-inputc.parentNode.removeChild(inputc);
-}
-</script>
+		<script>
+			function copyToClipboard(text) {
+				var inputc = document.body.appendChild(document.createElement("input"));
+				inputc.value = window.location.href;
+				inputc.focus();
+				inputc.select();
+				document.execCommand('copy');
+				inputc.parentNode.removeChild(inputc);
+			}
+		</script>
 		
 	</body>
 </html>
